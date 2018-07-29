@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>用户登录</title>
+
+    <!-- Bootstrap core CSS-->
+    <link href="../../statics/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template-->
+    <link href="../../statics/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template-->
+    <link href="../../statics/css/sb-admin.css" rel="stylesheet">
+
+  </head>
+
+  <body class="bg-dark">
+
+    <div class="container">
+      <div class="card card-login mx-auto mt-5">
+        <div class="card-header">用户登录</div>
+        <div class="card-body">
+        	 <span style="color:red">#(message)</span>
+          <form action="/user/login" method="post">
+            <div class="form-group">
+              <div class="form-label-group">
+                <input type="email" name="user.userName" value="#(user.userName??)" id="inputEmail" class="form-control" placeholder="用户名" required="required" autofocus="autofocus">
+                <label for="inputEmail">用户名</label>
+              </div>
+              <span style="color:red">#(userMsg)</span>
+            </div>
+            <div class="form-group">
+              <div class="form-label-group">
+                <input type="password" name="user.password" value="#(user.password??)" id="inputPassword" class="form-control" placeholder="密码" required="required">
+                <label for="inputPassword">密码</label>
+              </div>
+              <span style="color:red">#(pwdMsg)</span>
+            </div>
+            <div class="form-group">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="remember-me">
+                  	记住密码
+                </label>
+              </div>
+            </div>
+            <a class="btn btn-primary btn-block" href="javascript:$('form').submit()">登录</a>
+          </form>
+          <div class="text-center">
+            <a class="d-block small mt-3" href="/user/reg">注册账号</a>
+           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="../../statics/vendor/jquery/jquery.min.js"></script>
+    <script src="../../statics/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="../../statics/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  </body>
+
+</html>
